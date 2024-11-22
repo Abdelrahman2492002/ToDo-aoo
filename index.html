@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./main.scss" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Todo app</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="todo-app">
+        <header class="header">
+          <h1 class="header__main-heading">TODO</h1>
+          <div class="header__theme" tabindex="0">
+            <img
+              class="darkThem-icon"
+              src="./images/icon-moon.svg"
+              alt="toggle Theme Icon"
+            />
+            <img
+              class="lightTheme-icon"
+              src="./images/icon-sun.svg"
+              alt="toggle Theme Icon"
+            />
+          </div>
+        </header>
+        <form class="add-task">
+          <button class="addButton" type="submit"></button>
+          <input type="text" class="input" placeholder="Create a new Todo.." />
+        </form>
+        <div class="todo-body">
+          <ul class="task__list"></ul>
+        </div>
+        <footer class="todo-footer">
+          <div class="count-tasks">3 items left</div>
+          <div class="lists-filter">
+            <span class="list-filter__all list-filter active" tabindex="0"
+              >All</span
+            >
+            <span class="list-filter__active list-filter" tabindex="0"
+              >Active</span
+            >
+            <span class="list-filter__completed list-filter" tabindex="0"
+              >Completed</span
+            >
+          </div>
+          <div class="clear-completed" tabindex="0">Clear Completed</div>
+        </footer>
+      </div>
+      <p class="drag-hint">Drag and drop to reorder list</p>
+    </div>
+    <script src="./index.js" type="module"></script>
+  </body>
+</html>
